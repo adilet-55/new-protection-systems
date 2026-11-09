@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Protection Systems — Управление IT-инфраструктурой</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">New Protection <span>Systems</span></a>
+      <nav class="nav">
+        <a href="#services">Услуги</a>
+        <a href="#about">О нас</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Главная секция (Hero) -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Надежная IT-инфраструктура и <span class="gradient-text">кибербезопасность</span> для вашего бизнеса</h1>
+      <p class="hero-subtitle">Профессиональное системное администрирование, защита данных и техническая поддержка в Бишкеке.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Оставить заявку</a>
+        <a href="#services" class="btn btn-secondary">Наши услуги</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Блок услуг -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Наши Услуги</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Системное администрирование</h3>
+          <p>Настройка и обслуживание серверов, локальных сетей и рабочих мест сотрудников.</p>
+        </div>
+        <div class="service-card">
+          <h3>Кибербезопасность</h3>
+          <p>Защита корпоративной информации, аудит безопасности и предотвращение утечек данных.</p>
+        </div>
+        <div class="service-card">
+          <h3>IT-консалтинг</h3>
+          <p>Проектирование инфраструктуры, подбор оборудования и оптимизация расходов на IT.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- О компании -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">О компании</h2>
+      <p class="about-text">
+        «New Protection Systems» обеспечивает бесперебойную работу IT-систем для малого и среднего бизнеса. 
+        Мы берём на себя весь спектр задач — от технического обслуживания до комплексной защиты данных.
+      </p>
+      <div class="contact-info-list">
+        <p><strong>Адрес:</strong> г. Бишкек, ул. Узун-Булак, 76А</p>
+        <p><strong>График работы:</strong> Пн–Пт, 09:00–18:00</p>
+        <p><strong>Телефон:</strong> +996 706 144 004</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма заявки -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="form-card">
+        <h2>Оставить заявку на консультацию</h2>
+        <p>Заполните форму, и мы перезвоним вам в рабочее время.</p>
+
+        <form id="contact-form" action="https://formspree.io/f/xqkvqgzw" method="POST" novalidate>
+          <div class="form-group">
+            <input type="text" id="user-name" name="name" placeholder="Ваше имя" required>
+            <small class="error-msg" id="name-error"></small>
+          </div>
+
+          <div class="form-group">
+            <input type="tel" id="user-phone" name="phone" placeholder="Телефон / WhatsApp (например, 0706144004)" required>
+            <small class="error-msg" id="phone-error"></small>
+          </div>
+
+          <div class="form-group">
+            <textarea id="user-task" name="message" placeholder="Какая задача перед вами стоит? (минимум 10 символов)" required></textarea>
+            <small class="error-msg" id="task-error"></small>
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn btn-primary btn-block">Отправить заявку</button>
+          <div id="form-status" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; New Protection Systems. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
