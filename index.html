@@ -4,90 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Protection Systems — Управление IT-инфраструктурой</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="header">
         <div class="container">
-            <h1>New Protection Systems</h1>
-            <p>Комплексные системы безопасности и управление IT-инфраструктурой</p>
+            <h1>Новые Системы Защиты</h1>
+            <p>Проектирование и монтаж систем безопасности</p>
         </div>
     </header>
 
     <main class="container">
-        <section class="services">
-            <div class="service-card">
-                <i class="fa-solid fa-video"></i>
-                <h3>Видеонаблюдение</h3>
-                <p>Монтаж и настройка IP-камер с удаленным доступом с телефона.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3>Контроль доступа</h3>
-                <p>Установка СКУД, турникетов и биометрических замков.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-server"></i>
-                <h3>IT-инфраструктура</h3>
-                <p>Настройка серверов, локальных сетей и защита корпоративных данных.</p>
-            </div>
-        </section>
-
-        <section class="contact-section" id="order">
-            <h2>Оставить заявку на расчет</h2>
-            <p class="subtitle">Заполните форму, и наш инженер свяжется с вами в течение 15 минут</p>
-            
-            <form id="contact-form" action="https://formspree.io/f/xqkvqgzw" method="POST" novalidate>
+        <section class="contact-section">
+            <h2>Оставить заявку</h2>
+            <form id="contact-form" action="https://formspree.io/f/xqkvqgzw" method="POST">
                 <div class="form-group">
-                    <label for="name">Ваше имя *</label>
-                    <input type="text" id="name" name="name" placeholder="Например: Адилет">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" required placeholder="Адилет">
                     <small class="error-msg" id="name-error"></small>
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Номер телефона (Кыргызстан) *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="0700123456 или +996700123456">
+                    <label for="phone">Номер телефона (КР):</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="0700123456 или +996700123456">
                     <small class="error-msg" id="phone-error"></small>
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Опишите вашу задачу *</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Например: Нужна установка 4 камер в офис в Бишкеке..."></textarea>
+                    <label for="message">Ваша задача / сообщение:</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Опишите ваш объект..."></textarea>
                     <small class="error-msg" id="message-error"></small>
                 </div>
 
                 <button type="submit" id="submit-btn">Отправить заявку</button>
             </form>
-
-            <!-- Блок уведомления об успешной отправке -->
             <div id="status-message" class="status-hidden"></div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h4>Контакты</h4>
-                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/996706144600" target="_blank">+996 (706) 14-46-00</a></p>
-                <p><i class="fa-solid fa-location-dot"></i> г. Бишкек, ул. Узун-Булак, 76А</p>
-            </div>
-            <div class="footer-col">
-                <h4>График работы</h4>
-                <p><i class="fa-regular fa-clock"></i> Понедельник – Пятница</p>
-                <p class="highlight-time">09:00 – 18:00</p>
-                <p class="small-text">Суббота, Воскресенье: Выходной</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 New Protection Systems. Основатель: Осмонов Эрмек. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Обязательное подключение скрипта в самом конце -->
     <script src="script.js"></script>
 </body>
 </html>
