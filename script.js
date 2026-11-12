@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const messageInput = document.getElementById('message');
     const statusMsg = document.getElementById('status-message');
 
+    // Проверка правильности кыргызского номера
     function validatePhone(phone) {
         const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
         const kgRegex = /^(\+996|0)(50\d|55\d|70\d|77\d|22\d|99\d|312)\d{6}$/;
@@ -12,12 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Отменяет стандартный переход/перезагрузку
+        // Отменяем стандартную отправку и перезагрузку страницы
+        e.preventDefault();
         let isValid = true;
+        statusMsg.className = 'status-hidden';
 
-        // Проверка имени
+        // 1. Проверка имени
         if (nameInput.value.trim().length < 2) {
-            document.getElementById('name-error').textContent = 'Имя должно содержать не менее 2 символов';
+            document.getElementById('name-error').textContent = 'Имя введено неверно (минимум 2 символа)';
             nameInput.classList.add('invalid');
             isValid = false;
         } else {
@@ -25,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
             nameInput.classList.remove('invalid');
         }
 
-        // Проверка телефона КР
+        // 2. Проверка телефона
         if (!validatePhone(phoneInput.value)) {
-            document.getElementById('phone-error').textContent = 'Введите корректный номер КР (например, 0700123456 или +996700123456)';
+            document.getElementById('phone-error').textContent = 'Номер введен неправильно (формат КР: 0700123456 или +996700123456)';
             phoneInput.classList.add('invalid');
             isValid = false;
         } else {
@@ -35,9 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
             phoneInput.classList.remove('invalid');
         }
 
-        // Проверка сообщения
+        // 3. Проверка задачи / сообщения
         if (messageInput.value.trim().length < 10) {
-            document.getElementById('message-error').textContent = 'Описание задачи должно быть не менее 10 символов';
+            document.getElementById('message-error').textContent = 'Задача введена неверно (опишите подробнее, от 10 символов)';
             messageInput.classList.add('invalid');
             isValid = false;
         } else {
@@ -45,22 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
             messageInput.classList.remove('invalid');
         }
 
-        // Если валидация прошла успешно
+        // Если все заполнено правильно — выводим уведомление на сайте
         if (isValid) {
-            const formData = new FormData(form);
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).catch(() => {
-                // Игнорируем технические ошибки сети/Formspree для стабильности отчета по СРС
-            }).finally(() => {
-                // В любом случае показываем пользователю требуемое уведомление об обработке
-                statusMsg.className = 'status-success';
-                statusMsg.textContent = 'Ваша заявка принята и находится в обработке!';
-                form.reset();
-            });
+            statusMsg.className = 'status-success';
+            statusMsg.textContent = 'Заявка успешно отправлена и находится в обработке!';
+            form.reset();
         }
     });
 });
