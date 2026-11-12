@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     form.addEventListener('submit', function(e) {
-        // Отменяем стандартную отправку и перезагрузку страницы
         e.preventDefault();
         let isValid = true;
         statusMsg.className = 'status-hidden';
