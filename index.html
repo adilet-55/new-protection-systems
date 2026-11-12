@@ -3,189 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Protection Systems — IT-решения и безопасность</title>
-    <link rel="stylesheet" href="style.css">
+    <title>New Protection Systems — Управление IT-инфраструктурой</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Верхняя инфо-строка -->
-    <div class="top-bar">
-        <div class="container top-bar-content">
-            <div class="top-info">
-                <span><i class="fa-regular fa-clock"></i> Пн-Пт: 09:00 - 18:00</span>
-                <span><i class="fa-solid fa-location-dot"></i> г. Бишкек, ул. Узун-Булак, 76А</span>
-            </div>
-            <div class="top-contacts">
-                <a href="tel:+996706144004"><i class="fa-solid fa-phone"></i> +996 706 144 004</a>
-                <a href="https://wa.me/996706144004" target="_blank" class="wa-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Навигация -->
     <header class="header">
-        <div class="container nav-container">
-            <a href="#" class="logo">New Protection <span>Systems</span></a>
-            <nav class="nav">
-                <a href="#services">Услуги</a>
-                <a href="#advantages">Преимущества</a>
-                <a href="#about">О нас</a>
-                <a href="#contact" class="btn-nav">Связаться</a>
-            </nav>
+        <div class="container">
+            <h1>New Protection Systems</h1>
+            <p>Комплексные системы безопасности и управление IT-инфраструктурой</p>
         </div>
     </header>
 
-    <!-- Главный экран -->
-    <section class="hero">
-        <div class="hero-glow"></div>
-        <div class="container hero-content">
-            <h1>Надежная защита и управление <span class="gradient-text">IT-инфраструктурой</span></h1>
-            <p>Комплексный системный инжиниринг, бесперебойное обслуживание вычислительных сетей и защита данных для коммерческих и государственных организаций.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Обсудить проект</a>
-                <a href="tel:+996706144004" class="btn-secondary"><i class="fa-solid fa-phone"></i> Быстрый звонок</a>
+    <main class="container">
+        <section class="services">
+            <div class="service-card">
+                <i class="fa-solid fa-video"></i>
+                <h3>Видеонаблюдение</h3>
+                <p>Монтаж и настройка IP-камер с удаленным доступом с телефона.</p>
             </div>
-        </div>
-    </section>
+            <div class="service-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Контроль доступа</h3>
+                <p>Установка СКУД, турникетов и биометрических замков.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-server"></i>
+                <h3>IT-инфраструктура</h3>
+                <p>Настройка серверов, локальных сетей и защита корпоративных данных.</p>
+            </div>
+        </section>
 
-    <!-- Секция Цифр / Статистики -->
-    <section class="stats">
-        <div class="container stats-grid">
-            <div class="stat-card">
-                <h3>99.9%</h3>
-                <p>Аптайм систем клиентов</p>
-            </div>
-            <div class="stat-card">
-                <h3>15 мин</h3>
-                <p>Среднее время реакции</p>
-            </div>
-            <div class="stat-card">
-                <h3>24/7</h3>
-                <p>Мониторинг безопасности</p>
-            </div>
-            <div class="stat-card">
-                <h3>100%</h3>
-                <p>Гарантия сохранности данных</p>
-            </div>
-        </div>
-    </section>
+        <section class="contact-section" id="order">
+            <h2>Оставить заявку на расчет</h2>
+            <p class="subtitle">Заполните форму, и наш инженер свяжется с вами в течение 15 минут</p>
+            
+            <form id="contact-form" action="https://formspree.io/f/xqkvqgzw" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="name">Ваше имя *</label>
+                    <input type="text" id="name" name="name" placeholder="Например: Адилет">
+                    <small class="error-msg" id="name-error"></small>
+                </div>
 
-    <!-- Услуги -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="sub-title">Что мы делаем</span>
-                <h2 class="section-title">Ключевые компетенции</h2>
-            </div>
-            <div class="services-grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-server"></i></div>
-                    <h3>Управление вычислительными системами</h3>
-                    <p>Настройка, масштабирование и системное администрирование серверных комплексов любой сложности.</p>
+                <div class="form-group">
+                    <label for="phone">Номер телефона (Кыргызстан) *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="0700123456 или +996700123456">
+                    <small class="error-msg" id="phone-error"></small>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Кибербезопасность & Аудит</h3>
-                    <p>Защита коммерческих тайн, настройка фаерволов, шифрование каналов связи и защита от утёчек.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
-                    <h3>Сетевая инфраструктура</h3>
-                    <p>Проектирование и монтаж локальных сетей, IP-телефонии, бесшовного Wi-Fi и систем контроля доступа.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Преимущества -->
-    <section id="advantages" class="advantages">
-        <div class="container">
-            <div class="section-header">
-                <span class="sub-title">Почему мы</span>
-                <h2 class="section-title">Ваша IT-система в надежных руках</h2>
-            </div>
-            <div class="advantages-grid">
-                <div class="adv-item">
-                    <i class="fa-solid fa-bolt"></i>
-                    <div>
-                        <h4>Оперативное реагирование</h4>
-                        <p>Решаем критические инциденты удаленно за считанные минуты.</p>
-                    </div>
+                <div class="form-group">
+                    <label for="message">Опишите вашу задачу *</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Например: Нужна установка 4 камер в офис в Бишкеке..."></textarea>
+                    <small class="error-msg" id="message-error"></small>
                 </div>
-                <div class="adv-item">
-                    <i class="fa-solid fa-file-contract"></i>
-                    <div>
-                        <h4>Официальный договор</h4>
-                        <p>Полная юридическая прозрачность, SLA и фиксированная стоимость услуг.</p>
-                    </div>
-                </div>
-                <div class="adv-item">
-                    <i class="fa-solid fa-user-shield"></i>
-                    <div>
-                        <h4>Персональный инженер</h4>
-                        <p>За вашей компанией закрепляется ведущий специалист, знающий вашу инфраструктуру.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- О нас -->
-    <section id="about" class="about">
-        <div class="container about-grid">
-            <div class="about-text">
-                <span class="sub-title">О компании</span>
-                <h2>ОсОО «New Protection Systems»</h2>
-                <p>Мы — аккредитованная компания в Бишкеке, специализирующаяся на управлении вычислительным оборудованием и комплексном сопровождении IT-процессов.</p>
-                <p>Основатель и руководитель: <strong>Осмонов Эрмек Джолдошбекович</strong>. Наш подход — строить устойчивые, защищенные и легко масштабируемые IT-системы для бизнеса любого размера.</p>
-            </div>
-            <div class="about-box">
-                <div class="info-row"><i class="fa-solid fa-clock"></i> <span><strong>Режим работы:</strong> Пн–Пт: 09:00 – 18:00</span></div>
-                <div class="info-row"><i class="fa-solid fa-phone"></i> <span><strong>Телефон:</strong> +996 706 144 004</span></div>
-                <div class="info-row"><i class="fa-solid fa-location-dot"></i> <span><strong>Адрес:</strong> г. Бишкек, ул. Узун-Булак, 76А</span></div>
-            </div>
-        </div>
-    </section>
+                <button type="submit" id="submit-btn">Отправить заявку</button>
+            </form>
 
-    <!-- Контакты -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-box">
-                <h2>Оставить заявку на консультацию</h2>
-                <p>Заполните форму, и мы перезвоним вам в рабочее время.</p>
-                <form class="contact-form" id="tgForm">
-                    <div class="input-row">
-                        <input type="text" placeholder="Ваше имя" required>
-                        <input type="tel" placeholder="Телефон / WhatsApp" required>
-                    </div>
-                    <textarea placeholder="Какая задача перед вами стоит?" rows="4" required></textarea>
-                    <button type="submit" class="btn-primary">Отправить заявку</button>
-                </form>
-            </div>
-        </div>
-    </section>
+            <!-- Блок уведомления об успешной отправке -->
+            <div id="status-message" class="status-hidden"></div>
+        </section>
+    </main>
 
-    <!-- Детализированный подвал -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col">
-                <a href="#" class="logo">New Protection <span>Systems</span></a>
-                <p>Профессиональное управление вычислительными системами и IT-инфраструктурой.</p>
-            </div>
-            <div class="footer-col">
                 <h4>Контакты</h4>
-                <p><i class="fa-solid fa-phone"></i> <a href="tel:+996706144004">+996 706 144 004</a></p>
-                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/996706144004" target="_blank">Написать в WhatsApp</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/996706144600" target="_blank">+996 (706) 14-46-00</a></p>
                 <p><i class="fa-solid fa-location-dot"></i> г. Бишкек, ул. Узун-Булак, 76А</p>
             </div>
             <div class="footer-col">
                 <h4>График работы</h4>
-                <p><i class="fa-regular fa-clock"></i> Понедельник — Пятница</p>
-                <p class="highlight-time">09:00 — 18:00</p>
+                <p><i class="fa-regular fa-clock"></i> Понедельник – Пятница</p>
+                <p class="highlight-time">09:00 – 18:00</p>
                 <p class="small-text">Суббота, Воскресенье: Выходной</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 New Protection Systems. Основатель: Осмонов Эрмек. Все права защищены
+                <p>&copy; 2026 New Protection Systems. Основатель: Осмонов Эрмек. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Обязательное подключение скрипта в самом конце -->
+    <script src="script.js"></script>
+</body>
+</html>
