@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — New Protection Systems</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2.2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
+                </svg>
+                New Protection <span>Systems</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="services.html">Услуги</a>
+                <a href="about.html">О компании</a>
+                <a href="contact.html" class="btn-nav active">Связаться</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-box">
+                <h2>Оставить заявку на консультацию</h2>
+                <p>Заполните форму, и мы перезвоним вам в рабочее время.</p>
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="input-row">
+                        <div class="field-wrap">
+                            <input type="text" id="name" placeholder="Ваше имя">
+                            <small class="error-msg" id="name-error"></small>
+                        </div>
+                        <div class="field-wrap">
+                            <input type="tel" id="phone" placeholder="Телефон (0700... или +996...)">
+                            <small class="error-msg" id="phone-error"></small>
+                        </div>
+                    </div>
+                    <div class="field-wrap">
+                        <textarea id="message" placeholder="Какая задача перед вами стоит?" rows="4"></textarea>
+                        <small class="error-msg" id="message-error"></small>
+                    </div>
+                    <button type="submit" class="btn-primary btn-submit">Отправить заявку</button>
+                </form>
+                <div id="status-message" class="status-hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom"><div class="container"><p>&copy; 2026 New Protection Systems. Все права защищены.</p></div></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

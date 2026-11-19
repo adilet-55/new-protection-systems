@@ -23,27 +23,33 @@
         </div>
     </div>
 
-    <!-- Навигация -->
+    <!-- Единая навигация -->
     <header class="header">
         <div class="container nav-container">
-            <a href="#" class="logo">New Protection <span>Systems</span></a>
+            <a href="index.html" class="logo">
+                <svg class="logo-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2.2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                </svg>
+                New Protection <span>Systems</span>
+            </a>
             <nav class="nav">
-                <a href="#services">Услуги</a>
-                <a href="#advantages">Преимущества</a>
-                <a href="#about">О нас</a>
-                <a href="#contact" class="btn-nav">Связаться</a>
+                <a href="index.html" class="active">Главная</a>
+                <a href="services.html">Услуги</a>
+                <a href="about.html">О компании</a>
+                <a href="contact.html" class="btn-nav">Связаться</a>
             </nav>
         </div>
     </header>
 
-    <!-- Главный экран -->
+    <!-- Главный экран с фоновым изображением -->
     <section class="hero">
-        <div class="hero-glow"></div>
+        <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1>Надежная защита и управление <span class="gradient-text">IT-инфраструктурой</span></h1>
             <p>Комплексный системный инжиниринг, бесперебойное обслуживание вычислительных сетей и защита данных для коммерческих и государственных организаций.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Обсудить проект</a>
+                <a href="contact.html" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Обсудить проект</a>
                 <a href="tel:+996706144004" class="btn-secondary"><i class="fa-solid fa-phone"></i> Быстрый звонок</a>
             </div>
         </div>
@@ -52,26 +58,14 @@
     <!-- Секция Цифр / Статистики -->
     <section class="stats">
         <div class="container stats-grid">
-            <div class="stat-card">
-                <h3>99.9%</h3>
-                <p>Аптайм систем клиентов</p>
-            </div>
-            <div class="stat-card">
-                <h3>15 мин</h3>
-                <p>Среднее время реакции</p>
-            </div>
-            <div class="stat-card">
-                <h3>24/7</h3>
-                <p>Мониторинг безопасности</p>
-            </div>
-            <div class="stat-card">
-                <h3>100%</h3>
-                <p>Гарантия сохранности данных</p>
-            </div>
+            <div class="stat-card"><h3>99.9%</h3><p>Аптайм систем клиентов</p></div>
+            <div class="stat-card"><h3>15 мин</h3><p>Среднее время реакции</p></div>
+            <div class="stat-card"><h3>24/7</h3><p>Мониторинг безопасности</p></div>
+            <div class="stat-card"><h3>100%</h3><p>Гарантия сохранности данных</p></div>
         </div>
     </section>
 
-    <!-- Услуги -->
+    <!-- Услуги с изображениями -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
@@ -80,123 +74,52 @@
             </div>
             <div class="services-grid">
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-server"></i></div>
-                    <h3>Управление вычислительными системами</h3>
-                    <p>Настройка, масштабирование и системное администрирование серверных комплексов любой сложности.</p>
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="Серверная инфраструктура" class="card-img">
+                    <div class="card-body">
+                        <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+                        <h3>Управление вычислительными системами</h3>
+                        <p>Настройка, масштабирование и системное администрирование серверных комплексов любой сложности.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Кибербезопасность & Аудит</h3>
-                    <p>Защита коммерческих тайн, настройка фаерволов, шифрование каналов связи и защита от утёчек.</p>
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Кибербезопасность" class="card-img">
+                    <div class="card-body">
+                        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Кибербезопасность & Аудит</h3>
+                        <p>Защита коммерческих тайн, настройка фаерволов, шифрование каналов связи и защита от утёчек.</p>
+                    </div>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
-                    <h3>Сетевая инфраструктура</h3>
-                    <p>Проектирование и монтаж локальных сетей, IP-телефонии, бесшовного Wi-Fi и систем контроля доступа.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Преимущества -->
-    <section id="advantages" class="advantages">
-        <div class="container">
-            <div class="section-header">
-                <span class="sub-title">Почему мы</span>
-                <h2 class="section-title">Ваша IT-система в надежных руках</h2>
-            </div>
-            <div class="advantages-grid">
-                <div class="adv-item">
-                    <i class="fa-solid fa-bolt"></i>
-                    <div>
-                        <h4>Оперативное реагирование</h4>
-                        <p>Решаем критические инциденты удаленно за считанные минуты.</p>
-                    </div>
-                </div>
-                <div class="adv-item">
-                    <i class="fa-solid fa-file-contract"></i>
-                    <div>
-                        <h4>Официальный договор</h4>
-                        <p>Полная юридическая прозрачность, SLA и фиксированная стоимость услуг.</p>
-                    </div>
-                </div>
-                <div class="adv-item">
-                    <i class="fa-solid fa-user-shield"></i>
-                    <div>
-                        <h4>Персональный инженер</h4>
-                        <p>За вашей компанией закрепляется ведущий специалист, знающий вашу инфраструктуру.</p>
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Сетевая инфраструктура" class="card-img">
+                    <div class="card-body">
+                        <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3>Сетевая инфраструктура</h3>
+                        <p>Проектирование и монтаж локальных сетей, IP-телефонии, бесшовного Wi-Fi и систем контроля доступа.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- О нас -->
-    <section id="about" class="about">
-        <div class="container about-grid">
-            <div class="about-text">
-                <span class="sub-title">О компании</span>
-                <h2>ОсОО «New Protection Systems»</h2>
-                <p>Мы — аккредитованная компания в Бишкеке, специализирующаяся на управлении вычислительным оборудованием и комплексном сопровождении IT-процессов.</p>
-                <p>Основатель и руководитель: <strong>Осмонов Эрмек Джолдошбекович</strong>. Наш подход — строить устойчивые, защищенные и легко масштабируемые IT-системы для бизнеса любого размера.</p>
-            </div>
-            <div class="about-box">
-                <div class="info-row"><i class="fa-solid fa-clock"></i> <span><strong>Режим работы:</strong> Пн–Пт: 09:00 – 18:00</span></div>
-                <div class="info-row"><i class="fa-solid fa-phone"></i> <span><strong>Телефон:</strong> +996 706 144 004</span></div>
-                <div class="info-row"><i class="fa-solid fa-location-dot"></i> <span><strong>Адрес:</strong> г. Бишкек, ул. Узун-Булак, 76А</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Контакты и форма с проверкой -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-box">
-                <h2>Оставить заявку на консультацию</h2>
-                <p>Заполните форму, и мы перезвоним вам в рабочее время.</p>
-                
-                <form class="contact-form" id="contact-form" novalidate>
-                    <div class="input-row">
-                        <div class="field-wrap">
-                            <input type="text" id="name" placeholder="Ваше имя">
-                            <small class="error-msg" id="name-error"></small>
-                        </div>
-                        <div class="field-wrap">
-                            <input type="tel" id="phone" placeholder="Телефон (0700... или +996...)">
-                            <small class="error-msg" id="phone-error"></small>
-                        </div>
-                    </div>
-                    <div class="field-wrap">
-                        <textarea id="message" placeholder="Какая задача перед вами стоит?" rows="4"></textarea>
-                        <small class="error-msg" id="message-error"></small>
-                    </div>
-                    <button type="submit" class="btn-primary btn-submit">Отправить заявку</button>
-                </form>
-
-                <!-- Уведомление об отправке -->
-                <div id="status-message" class="status-hidden"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Детализированный подвал -->
+    <!-- Единый подвал -->
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-col">
-                <a href="#" class="logo">New Protection <span>Systems</span></a>
+                <a href="index.html" class="logo">New Protection <span>Systems</span></a>
                 <p>Профессиональное управление вычислительными системами и IT-инфраструктурой.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <p><a href="index.html">Главная</a></p>
+                <p><a href="services.html">Услуги и тарифы</a></p>
+                <p><a href="about.html">О компании</a></p>
+                <p><a href="contact.html">Оставить заявку</a></p>
             </div>
             <div class="footer-col">
                 <h4>Контакты</h4>
                 <p><i class="fa-solid fa-phone"></i> <a href="tel:+996706144004">+996 706 144 004</a></p>
                 <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/996706144004" target="_blank">Написать в WhatsApp</a></p>
                 <p><i class="fa-solid fa-location-dot"></i> г. Бишкек, ул. Узун-Булак, 76А</p>
-            </div>
-            <div class="footer-col">
-                <h4>График работы</h4>
-                <p><i class="fa-regular fa-clock"></i> Понедельник — Пятница</p>
-                <p class="highlight-time">09:00 — 18:00</p>
-                <p class="small-text">Суббота, Воскресенье: Выходной</p>
             </div>
         </div>
         <div class="footer-bottom">
